@@ -10,6 +10,7 @@ body {
 	border: none;
 	font-family: 'Fredericka the Great', cursive;
 	border-radius: 25px;
+	height: 25em;
 }
 
 button {
@@ -27,10 +28,29 @@ p {
 	color: white;
 	font-size: 15px;
 
+
 }
 
 img {
 	
 	border: solid 2px white;
 	
+	
+}
+
+label {
+	font-size: 30px;
+}
+
+#add-movie {
+	background-color: black;
+	border-radius: 5px;
+	padding: 2px 12px 2px 12px;
+	font-size: 20px;
+}
+
+#movie-input {
+	color: black;
+	padding-top: 5px;
+	padding-bottom: 3px;
 }

@@ -5,14 +5,21 @@
 	var animatedGif;
 	var staticGif;
 
+function renderButtons(){
+            $('#gifBtns').empty();
+
+
 	for (var i=0; i < topics.length; i++){	
 		var gif_btn = $('<button>');
 		gif_btn.attr("data-topic", topics[i]);
 		gif_btn.text(topics[i]);
 		$('#gifBtns').append(gif_btn);
 	}
+}
 
-	$("button").on("click", function(){
+renderButtons();
+
+	$(document).on("click", "button", function(){
 		var topic = $(this).data("topic");
 		console.log(topic);
 		var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
@@ -57,10 +64,11 @@
 	});
 
 
+
 	$(document).on("click", ".gif", function(){
-        console.log("click");
+        
 		var state = $(this).attr("data-state");
-        console.log(state);
+        
 
 		if (state === "still"){
 			animatedGif = $(this).attr('data-animate');
@@ -72,3 +80,15 @@
         	$(this).attr("data-state", "still");
 		}
 	});
+
+    $('#add-movie').on("click", function(event){
+        event.preventDefault();
+        var input = $("#movie-input").val();
+        console.log(input);
+        topics.push(input);
+        console.log(topics);
+        renderButtons();
+    });
+
+
+

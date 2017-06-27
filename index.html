@@ -12,19 +12,26 @@
 </head>
 <body>
 
-<div class="jumbotron">
-  <h1>GifTastic!</h1>
-  <p></p>
-</div>
+  <div class="jumbotron">
+    <h1>GifTastic!</h1><br><br><br>
+      <form id="gif-form">
+        <label for="movie-input">Add a GifTastic Button!</label>
+        <input type="text" id="movie-input">
+        <input id="add-movie" type="submit" value="Submit">
+      </form>
+  </div>
 
 <br><br>
 
-<div id="gifBtns"></div>
+  <div id="gifBtns"></div>
+
 <br><br>
-<div id="gifs_container"></div>
 
-
-
+  <div id="container">
+    <div id="row">
+      <div id="gifs_container" class="col-md-12"></div>
+    </div>
+  </div>
 
 <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
 <script src="logic.js"></script>
